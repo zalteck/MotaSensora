@@ -1,0 +1,339 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/UltimaMed"
+        android:id="@+id/titleValores"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Recibida"
+        android:layout_below="@id/titleValores"
+        android:id="@+id/titleHora"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/botonConectar"
+        android:text="@string/BttnDESCONECTAR"
+        android:onClick="actionConectar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleHora"
+        android:id="@+id/cajaInfo">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/cajaInfoTemp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/tem"
+                android:id="@+id/imgTem"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/imgTem"
+                android:textSize="27sp"
+                android:id="@+id/textTem"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/textTem"
+                android:text="º"
+                android:textSize="27sp"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cajaInfoTemp"
+            android:id="@+id/cajaInfoHum">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/hum"
+                android:id="@+id/imgHum"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/imgHum"
+                android:text="-"
+                android:textSize="27sp"
+                android:id="@+id/textHum"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/textHum"
+                android:text="%"
+                android:textSize="27sp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cajaInfoHum"
+            android:layout_below="@+id/cajaInfoTemp"
+            android:id="@+id/cajaInfoLuz">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/luz"
+                android:id="@+id/imgLuz"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/imgLuz"
+                android:text="-"
+                android:textSize="27sp"
+                android:id="@+id/textLuz"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/textLuz"
+                android:text="lux"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Historial"
+        android:id="@+id/titleObtain"
+        android:layout_below="@+id/cajaInfo"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cajaBotones"
+        android:layout_below="@+id/titleObtain"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/buttonTemp"
+            android:background="@drawable/tem"
+            android:onClick="actionTemp"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/buttonHum"
+            android:background="@drawable/hum"
+            android:onClick="actionHum"
+            android:layout_toRightOf="@+id/buttonTemp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/buttonLuz"
+            android:background="@drawable/luz"
+            android:onClick="actionLuz"
+            android:layout_toRightOf="@+id/buttonHum" />
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Configuracion"
+        android:id="@+id/titleSet"
+        android:layout_below="@+id/cajaBotones"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modVariables"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleSet">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/modTemp">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTempCentral"
+                android:layout_centerVertical="true"
+                android:text="@string/Tcent"/>
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textTempCentral"
+                android:id="@+id/modValueTemp"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricoTemp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/modValueTemp"
+                android:textSize="24sp"
+                android:text="ºC "/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="@string/BttnCambiar"
+                android:layout_alignParentRight="true"
+                android:onClick="modificarTemperaturaCentral"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modTemp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/modHum">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textHumCentral"
+                android:layout_centerVertical="true"
+                android:text="@string/HRcent"/>
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textHumCentral"
+                android:id="@+id/modValueHum"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricoHum"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/modValueHum"
+                android:textSize="18sp"
+                android:text="@string/HRunid"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="@string/BttnCambiar"
+                android:layout_alignParentRight="true"
+                android:onClick="modificarHumedadCentral"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modHum"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/modLuz">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textLuzMax"
+                android:layout_centerVertical="true"
+                android:text="@string/LuzMax"/>
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textLuzMax"
+                android:id="@+id/modValueLuz"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricoLuz"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/modValueLuz"
+                android:textSize="18sp"
+                android:text="lux "/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="@string/BttnCambiar"
+                android:layout_alignParentRight="true"
+                android:onClick="modificarLuzMax"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modLuz"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/modInt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textInt"
+                android:layout_centerVertical="true"
+                android:text="@string/IntMed"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textInt"
+                android:id="@+id/modValueInt"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricoInt"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/modValueInt"
+                android:textSize="18sp"
+                android:text="s "/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="@string/BttnCambiar"
+                android:layout_alignParentRight="true"
+                android:onClick="modificarIntervalo"/>
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

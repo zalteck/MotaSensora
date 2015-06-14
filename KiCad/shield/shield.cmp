@@ -1,0 +1,73 @@
+Cmp-Mod V01 Created by PcbNew date = 10/06/2015 13:25:29
+
+BeginCmp
+TimeStamp = /54DA39DC;
+Reference = C1;
+ValeurCmp = 0.1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA39EB;
+Reference = C2;
+ValeurCmp = 0.1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA39FA;
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA3A09;
+Reference = C4;
+ValeurCmp = 0.22uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA3918;
+Reference = J1;
+ValeurCmp = BH1710FVC-TR;
+IdModule  = TSL2561;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA3927;
+Reference = J2;
+ValeurCmp = HIH6130-021-001;
+IdModule  = Humedad;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA39CD;
+Reference = R1;
+ValeurCmp = 1k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA39AF;
+Reference = R2;
+ValeurCmp = 2.2k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA39BE;
+Reference = R3;
+ValeurCmp = 2.2k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DA3902;
+Reference = SHIELD1;
+ValeurCmp = ARDUINO_MEGA_SHIELD;
+IdModule  = ARDUINO MEGA SHIELD;
+EndCmp
+
+EndListe
