@@ -15,3 +15,6 @@ Bluetooth, and to read the measurements and know about the state of the ambient 
 
 The Arduino code will manage the shield and take care of reading the sensors. It will also control de Bluetooth connectivity and send
 the data to the Android device.
+
+This is registered in zenodo:
+![image](https://github.com/zalteck/MotaSensora/assets/9654146/1bcd5b2b-89eb-4163-bf12-d6d760c86808)
