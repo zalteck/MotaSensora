@@ -17,4 +17,5 @@ The Arduino code will manage the shield and take care of reading the sensors. It
 the data to the Android device.
 
 This is registered in zenodo:
-![image](https://github.com/zalteck/MotaSensora/assets/9654146/1bcd5b2b-89eb-4163-bf12-d6d760c86808)
+[![DOI](https://zenodo.org/badge/30555681.svg)](https://zenodo.org/doi/10.5281/zenodo.10204133)
+
